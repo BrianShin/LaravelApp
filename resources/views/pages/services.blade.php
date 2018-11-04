@@ -3,11 +3,11 @@
 
 <h1>{{ $title }}</h1>
 @if( count($services) > 0)
-    @foreach($services as $i)
-        <ul>
-            <li>{{$i}}</li>
-        </ul>
-    @endforeach
+    <ul class='list-group'>
+        @foreach($services as $i)
+            <li class='list-group-item'>{{$i}}</li>       
+        @endforeach
+    </ul>
 @endif
 
 @endsection
