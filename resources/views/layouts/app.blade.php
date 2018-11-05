@@ -10,7 +10,7 @@
     </head>
     <body>
         <!-- navigation -->
-        @include('include.navbar')
+        @include('include.navbar ')
 
         <div class='container'>
                 @yield('content')
