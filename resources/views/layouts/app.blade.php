@@ -5,17 +5,21 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel='stylesheet' href="{{asset('css/app.css')}}">
-        <!-- -->
         <title>{{ config('app.name', 'Brian') }} </title>
     </head>
     <body>
         <!-- navigation -->
         @include('include.navbar')
-
-        <div class='container'>
+        
+        <div class='container'>        
+            @include('include.messages')<!-- error messages -->
             @yield('content')
         </div>
         
         <script src="{{asset('js/app.js')}}"></script>
+        <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace( 'article-ckeditor' );
+        </script>
     </body>
 </html>

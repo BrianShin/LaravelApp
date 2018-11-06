@@ -9,7 +9,7 @@
                 <div class="">{{ $i->created_at }}</div>             
             </div>
         @endforeach
-        {{$posts->links()}}
+        {{$posts->links()}}<!-- pagination: can be found in PostsController -->
     @else
         <P>no posts found</p>
     @endif
