@@ -6,7 +6,8 @@
         @foreach($posts as $i)
             <div class="card">    
                 <div class=""><a href='/posts/{{$i->id}}'>{{ $i->title }}</div>
-                <div class="">{{ $i->created_at }}</div>             
+                <small>created at: {{ $i->created_at }},
+                 written by: {{$i->user->name}}</small>             
             </div>
         @endforeach
         {{$posts->links()}}<!-- pagination: can be found in PostsController -->
